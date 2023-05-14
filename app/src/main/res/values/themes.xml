@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="Theme.SDKBiometriaTH.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SDKBiometriaTH.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
