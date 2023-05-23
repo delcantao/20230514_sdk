@@ -72,13 +72,6 @@ public final class LivenessActivity extends AppCompatActivity  {
     private int lensFacing = CameraSelector.LENS_FACING_FRONT;
     private CameraSelector cameraSelector;
 
-
-    public void startLivenessDetection() {
-        // fazer aqui a chamada a api de config e inicio do liveness
-        Intent intent = new Intent(this, LivenessActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

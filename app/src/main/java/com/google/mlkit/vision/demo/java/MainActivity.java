@@ -2,8 +2,6 @@ package com.google.mlkit.vision.demo.java;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
@@ -38,8 +36,23 @@ public class MainActivity extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+
+
+                SistemasTHSDK sdkTh = new SistemasTHSDK("");
+                try {
+                    sdkTh.startLivenessDetection(getApplicationContext());
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+//                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+//                    Intent t = new Intent(getApplicationContext(), LivenessActivity.class);
+//                    startActivity(t);
+//
+//                }
+
             }
         });
     }

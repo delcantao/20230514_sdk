@@ -1,12 +1,16 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.library' 
+
 //apply plugin: 'com.android.application'
+
 
 android {
     compileSdkVersion 33
 
+
+
     defaultConfig {
 //        applicationId "com.google.mlkit.vision.demo"
-        minSdkVersion 19
+        minSdkVersion 21
         multiDexEnabled true
         targetSdkVersion 33
 
@@ -40,11 +44,12 @@ android {
     }
 
     // Do NOT compress tflite model files (need to call out to developers!)
-    aaptOptions {
-        noCompress "tflite"
-    }
     buildFeatures {
         viewBinding true
+    }
+    namespace 'com.google.mlkit.vision.demo'
+    androidResources {
+        noCompress 'tflite'
     }
 }
 
@@ -54,7 +59,6 @@ repositories {
 }
 
 dependencies {
-
     implementation 'androidx.multidex:multidex:2.0.1'
 
     // Face features
@@ -71,6 +75,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
+//    implementation 'androidx.databinding:compiler:3.2.0-alpha11'
 
     // For how to setup gradle dependencies in Android X, see:
     // https://developer.android.com/training/testing/set-up-project#gradle-dependencies
@@ -107,4 +112,5 @@ configurations {
     // Resolves dependency conflict caused by some dependencies use
     // com.google.guava:guava and com.google.guava:listenablefuture together.
     all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+
 }
