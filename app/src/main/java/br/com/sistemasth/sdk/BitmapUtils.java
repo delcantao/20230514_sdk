@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo;
+package br.com.sistemasth.sdk;
 
 import android.content.ContentResolver;
 import android.graphics.Bitmap;

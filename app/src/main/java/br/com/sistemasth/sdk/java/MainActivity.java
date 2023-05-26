@@ -1,4 +1,4 @@
-package com.google.mlkit.vision.demo.java;
+package br.com.sistemasth.sdk.java;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.google.mlkit.vision.demo.databinding.ActivityMainBinding;
+import br.com.sistemasth.sdk.databinding.ActivityMainBinding;
 
-import com.google.mlkit.vision.demo.R;
+import br.com.sistemasth.sdk.R;
 
 public class MainActivity extends AppCompatActivity {
 

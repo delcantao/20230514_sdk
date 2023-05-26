@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo;
+package br.com.sistemasth.sdk;
 
 /** Describing a frame info. */
 public class FrameMetadata {

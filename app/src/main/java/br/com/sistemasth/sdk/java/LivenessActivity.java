@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo.java;
+package br.com.sistemasth.sdk.java;
 
 import android.Manifest;
 import android.content.Context;
@@ -40,12 +40,12 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory;
 import com.google.android.gms.common.annotation.KeepName;
 import com.google.mlkit.common.MlKitException;
-import com.google.mlkit.vision.demo.CameraXViewModel;
-import com.google.mlkit.vision.demo.GraphicOverlay;
-import com.google.mlkit.vision.demo.R;
-import com.google.mlkit.vision.demo.VisionImageProcessor;
-import com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor;
-import com.google.mlkit.vision.demo.preference.PreferenceUtils;
+import br.com.sistemasth.sdk.CameraXViewModel;
+import br.com.sistemasth.sdk.GraphicOverlay;
+import br.com.sistemasth.sdk.R;
+import br.com.sistemasth.sdk.VisionImageProcessor;
+import br.com.sistemasth.sdk.java.facedetector.FaceDetectorProcessor;
+import br.com.sistemasth.sdk.preference.PreferenceUtils;
 
 import java.util.ArrayList;
 

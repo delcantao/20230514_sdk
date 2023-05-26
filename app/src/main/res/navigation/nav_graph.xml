@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.google.mlkit.vision.demo.java.FirstFragment"
+        android:name="br.com.sistemasth.sdk.java.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.google.mlkit.vision.demo.java.SecondFragment"
+        android:name="br.com.sistemasth.sdk.java.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
