@@ -20,6 +20,7 @@ public class SistemasTHSDK {
 
     private CompletableFuture<Void> constructorFuture;
     private String rrrr;
+
     public SistemasTHSDK(String apiKey) {
         validateApiKey(apiKey);
         loadDataFromServer();
@@ -27,8 +28,11 @@ public class SistemasTHSDK {
 
 
     private void validateApiKey(String apiKey) {
-
+        Log.d("SistemasTHSDK", apiKey);
+        Log.d("SistemasTHSDK", "validateApiKey");
+        Log.d("SistemasTHSDK", "validateApiKey");
     }
+
     private void loadDataFromServer() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             constructorFuture = CompletableFuture.runAsync(() -> {
@@ -45,18 +49,13 @@ public class SistemasTHSDK {
                     String response;
                     while ((response = reader.readLine()) != null) {
                         // Processar a resposta da API, se necessário
-                        System.out.println(response);
                         rrrr = response;
                     }
-
-                    JSONObject jsonObject = new JSONObject(response);
 
 
                     reader.close();
                     connection.disconnect();
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
-                } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }
 
@@ -65,12 +64,17 @@ public class SistemasTHSDK {
     }
 
     public void startLivenessDetection(Context currentActivity) throws Exception {
+
+
+
+        Log.d("SistemasTHSDK1", rrrr == null ? "null" : rrrr);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             constructorFuture.thenRun(() -> {
                 // Aqui você pode ter certeza de que a chamada do construtor foi finalizada
                 // Faça qualquer operação adicional necessária
 
-                Log.d("SistemasTHSDK", rrrr);
+                Log.d("SistemasTHSDK2", rrrr == null ? "null" : rrrr);
 
 //                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 //                    Intent intent = new Intent(currentActivity, LivenessActivity.class);

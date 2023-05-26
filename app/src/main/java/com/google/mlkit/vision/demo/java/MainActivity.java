@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
                 SistemasTHSDK sdkTh = new SistemasTHSDK("");
                 try {
-                    sdkTh.startLivenessDetection((Activity) getApplicationContext());
+                    sdkTh.startLivenessDetection(MainActivity.this);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
