@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo;
+package br.com.sistemasth.sdk;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import com.google.mlkit.vision.demo.GraphicOverlay.Graphic;
+import br.com.sistemasth.sdk.GraphicOverlay.Graphic;
 
 /** Draw camera image to background. */
 public class CameraImageGraphic extends Graphic {

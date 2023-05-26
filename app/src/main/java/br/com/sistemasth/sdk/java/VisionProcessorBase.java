@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo.java;
+package br.com.sistemasth.sdk.java;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -42,15 +42,15 @@ import com.google.android.odml.image.MediaMlImageBuilder;
 import com.google.android.odml.image.MlImage;
 import com.google.mlkit.common.MlKitException;
 import com.google.mlkit.vision.common.InputImage;
-import com.google.mlkit.vision.demo.BitmapUtils;
-import com.google.mlkit.vision.demo.CameraImageGraphic;
-import com.google.mlkit.vision.demo.FrameMetadata;
-import com.google.mlkit.vision.demo.GraphicOverlay;
-import com.google.mlkit.vision.demo.InferenceInfoGraphic;
-import com.google.mlkit.vision.demo.ScopedExecutor;
-import com.google.mlkit.vision.demo.TemperatureMonitor;
-import com.google.mlkit.vision.demo.VisionImageProcessor;
-import com.google.mlkit.vision.demo.preference.PreferenceUtils;
+import br.com.sistemasth.sdk.BitmapUtils;
+import br.com.sistemasth.sdk.CameraImageGraphic;
+import br.com.sistemasth.sdk.FrameMetadata;
+import br.com.sistemasth.sdk.GraphicOverlay;
+import br.com.sistemasth.sdk.InferenceInfoGraphic;
+import br.com.sistemasth.sdk.ScopedExecutor;
+import br.com.sistemasth.sdk.TemperatureMonitor;
+import br.com.sistemasth.sdk.VisionImageProcessor;
+import br.com.sistemasth.sdk.preference.PreferenceUtils;
 import java.nio.ByteBuffer;
 import java.util.Timer;
 import java.util.TimerTask;

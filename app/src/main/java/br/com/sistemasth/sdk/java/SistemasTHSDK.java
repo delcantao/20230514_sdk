@@ -1,4 +1,4 @@
-package com.google.mlkit.vision.demo.java;
+package br.com.sistemasth.sdk.java;
 
 import android.content.Context;
 import android.os.Build;

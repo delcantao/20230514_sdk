@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo;
+package br.com.sistemasth.sdk;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -31,7 +31,7 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
 import com.google.android.gms.common.images.Size;
-import com.google.mlkit.vision.demo.preference.PreferenceUtils;
+import br.com.sistemasth.sdk.preference.PreferenceUtils;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

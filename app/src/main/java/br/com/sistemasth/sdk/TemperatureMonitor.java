@@ -1,4 +1,4 @@
-package com.google.mlkit.vision.demo;
+package br.com.sistemasth.sdk;
 
 import android.content.Context;
 import android.hardware.Sensor;

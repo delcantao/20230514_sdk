@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo.java.facedetector;
+package br.com.sistemasth.sdk.java.facedetector;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
-import com.google.mlkit.vision.demo.GraphicOverlay;
-import com.google.mlkit.vision.demo.GraphicOverlay.Graphic;
+import br.com.sistemasth.sdk.GraphicOverlay;
+import br.com.sistemasth.sdk.GraphicOverlay.Graphic;
 import com.google.mlkit.vision.face.Face;
 import com.google.mlkit.vision.face.FaceContour;
 import com.google.mlkit.vision.face.FaceLandmark;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.mlkit.vision.demo.preference;
+package br.com.sistemasth.sdk.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -27,9 +27,9 @@ import androidx.camera.core.CameraSelector;
 import com.google.android.gms.common.images.Size;
 import com.google.common.base.Preconditions;
 import com.google.mlkit.common.model.LocalModel;
-import com.google.mlkit.vision.demo.CameraSource;
-import com.google.mlkit.vision.demo.CameraSource.SizePair;
-import com.google.mlkit.vision.demo.R;
+import br.com.sistemasth.sdk.CameraSource;
+import br.com.sistemasth.sdk.CameraSource.SizePair;
+import br.com.sistemasth.sdk.R;
 import com.google.mlkit.vision.face.FaceDetectorOptions;
 
 /** Utility class to retrieve shared preferences. */
