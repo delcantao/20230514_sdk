@@ -1,5 +1,6 @@
 package com.google.mlkit.vision.demo.java;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
                 SistemasTHSDK sdkTh = new SistemasTHSDK("");
                 try {
-                    sdkTh.startLivenessDetection(getApplicationContext());
+                    sdkTh.startLivenessDetection((Activity) getApplicationContext());
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
