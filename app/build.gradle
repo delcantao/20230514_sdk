@@ -1,10 +1,12 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+
 //apply plugin: 'com.android.application'
 
 
 android {
     compileSdkVersion 33
-
 
 
     defaultConfig {
@@ -51,7 +53,19 @@ android {
         noCompress 'tflite'
     }
 }
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
 
+                groupId = 'com.github.delcantao'
+                artifactId = '20230514_sdk'
+                version = 'v1.0.5'
+            }
+        }
+    }
+}
 repositories {
     // Depending on AndroidX Snapshot Builds to get the latest CameraX libs.
     maven { url 'https://androidx.dev/snapshots/builds/6787662/artifacts/repository/' }
@@ -64,7 +78,7 @@ dependencies {
     implementation 'com.google.mlkit:face-detection:16.1.5'
     // Or comment the dependency above and uncomment the dependency below to
     // use unbundled model that depends on Google Play Services
-     implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
+    implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
 
 
     // -------------------------------------------------------
