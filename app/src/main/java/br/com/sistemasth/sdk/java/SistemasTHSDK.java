@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.concurrent.CompletableFuture;
 
 
-public class SistemasTHSDK {
+public final class SistemasTHSDK {
 
     private CompletableFuture<Void> constructorFuture;
     private String rrrr;
