@@ -5,6 +5,10 @@ import android.os.Build;
 import android.util.JsonReader;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
+
+import com.google.android.gms.common.annotation.KeepName;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,7 +19,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.CompletableFuture;
 
-
+@KeepName
+@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 public final class SistemasTHSDK {
 
     private CompletableFuture<Void> constructorFuture;
