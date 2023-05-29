@@ -67,7 +67,7 @@ public final class SistemasTHSDK {
             });
         }
     }
-
+    @KeepName
     public void startLivenessDetection(Context currentActivity) throws Exception {
 
 
@@ -89,6 +89,14 @@ public final class SistemasTHSDK {
 
             });
         }
+    }
+    @KeepName
+    public void getOcr(String base64Doc) {
+        Log.d("SistemasTHSDK", "startOcrDetection");
+    }
+    @KeepName
+    public void getFaceMatch(String base64Doc, String base64Selfie) {
+        Log.d("SistemasTHSDK", "startFaceMatch");
     }
 
 }
