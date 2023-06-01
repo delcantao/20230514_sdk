@@ -196,66 +196,66 @@ public final class SistemasTHSDK {
         }
     }
 
-
-    private void startVerify() {
-        if (startVerifyDone != 0) return;
-        if (imageHeight == 0 || imageWidth == 0) return;
-        setTextInstructions(_context.getResources().getString(R.string.wait_for_the_white_nose_point));
-
-        startVerifyDone = 1;
-
-        try {
-            URL url = new URL(baseUrl + "us/challenge/start");
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("model", Build.MODEL);
-            connection.setRequestProperty("OSVersion", Build.VERSION.RELEASE);
-            connection.setRequestProperty("ID", Settings.Secure.ANDROID_ID);
-            connection.setDoOutput(true);
-
-            JSONObject body = new JSONObject();
-            body.put("userId", "9286228c-5b45-4b73-9284-c44d877f0a81");
-            body.put("imageWidth", imageWidth);
-            body.put("imageHeight", imageHeight);
-
-            OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
-            writer.write(body.toString());
-            writer.flush();
-
-            int responseCode = connection.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                StringBuilder response = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    response.append(line);
-                }
-                reader.close();
-
-                JSONObject jsonObject = new JSONObject(response.toString());
-                requestId = jsonObject.getString("id");
-                String userId = jsonObject.getString("userId");
-                token = jsonObject.getString("token");
-                xNose = jsonObject.getInt("noseLeft");
-                yNose = jsonObject.getInt("noseTop");
-                heightBox = jsonObject.getInt("areaHeight");
-                widthBox = jsonObject.getInt("areaWidth");
-                xBox = jsonObject.getInt("areaLeft");
-                yBox = jsonObject.getInt("areaTop");
-
-                startVerifyDone = 2;
-                setTextInstructions(_context.getResources().getString(R.string.wait_for_the_white_nose_point));
-            } else {
-                Log.d(TAG, "StartVerify: HTTP request failed with response code: " + responseCode);
-            }
-
-            connection.disconnect();
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            Log.d(TAG, "StartVerify: Exception: " + e.getMessage());
-        }
-    }
+//
+//    private void startVerify() {
+//        if (startVerifyDone != 0) return;
+//        if (imageHeight == 0 || imageWidth == 0) return;
+//        setTextInstructions(_context.getResources().getString(R.string.wait_for_the_white_nose_point));
+//
+//        startVerifyDone = 1;
+//
+//        try {
+//            URL url = new URL(baseUrl + "us/challenge/start");
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("Content-Type", "application/json");
+//            connection.setRequestProperty("model", Build.MODEL);
+//            connection.setRequestProperty("OSVersion", Build.VERSION.RELEASE);
+//            connection.setRequestProperty("ID", Settings.Secure.ANDROID_ID);
+//            connection.setDoOutput(true);
+//
+//            JSONObject body = new JSONObject();
+//            body.put("userId", "9286228c-5b45-4b73-9284-c44d877f0a81");
+//            body.put("imageWidth", imageWidth);
+//            body.put("imageHeight", imageHeight);
+//
+//            OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+//            writer.write(body.toString());
+//            writer.flush();
+//
+//            int responseCode = connection.getResponseCode();
+//            if (responseCode == HttpURLConnection.HTTP_OK) {
+//                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+//                StringBuilder response = new StringBuilder();
+//                String line;
+//                while ((line = reader.readLine()) != null) {
+//                    response.append(line);
+//                }
+//                reader.close();
+//
+//                JSONObject jsonObject = new JSONObject(response.toString());
+//                requestId = jsonObject.getString("id");
+//                String userId = jsonObject.getString("userId");
+//                token = jsonObject.getString("token");
+//                xNose = jsonObject.getInt("noseLeft");
+//                yNose = jsonObject.getInt("noseTop");
+//                heightBox = jsonObject.getInt("areaHeight");
+//                widthBox = jsonObject.getInt("areaWidth");
+//                xBox = jsonObject.getInt("areaLeft");
+//                yBox = jsonObject.getInt("areaTop");
+//
+//                startVerifyDone = 2;
+//                setTextInstructions(_context.getResources().getString(R.string.wait_for_the_white_nose_point));
+//            } else {
+//                Log.d(TAG, "StartVerify: HTTP request failed with response code: " + responseCode);
+//            }
+//
+//            connection.disconnect();
+//        } catch (IOException | JSONException e) {
+//            e.printStackTrace();
+//            Log.d(TAG, "StartVerify: Exception: " + e.getMessage());
+//        }
+//    }
 
 
     @KeepName
